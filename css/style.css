@@ -25,7 +25,16 @@ ul {list-style-type: none;}
     color: #fff;
     font-size: 11px;
 }
-
+.mini-btn {
+    border: none;
+    color: #fff;
+    height: 30px;
+    line-height: 30px;
+    width: 30px;
+    background-image: url(../img/back.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
 
 /*************************************************/
 .yellow {
@@ -45,6 +54,15 @@ ul {list-style-type: none;}
 }
 .blue {
     background-color:#0e5f7f !important;
+}
+.purple {
+    background-color:#683c88;
+}
+.coral {
+    background-color: #8e6c44;
+}
+.pink {
+    background-color:#b55b5b;
 }
 .blue-brd {
     border-color: rgb(14, 95, 127) !important;
@@ -127,6 +145,7 @@ body {
     color: #ccc4bc;
     font-size: 12px;
     line-height: 1;
+    overflow-y: auto;
 }
 
 section.section-1, section.section-3 {
@@ -235,7 +254,7 @@ div.menu span:hover ~ ul {
     margin-top: 10px;
     text-align: center;
 }
-.collapse + input:checked + div i {
+.collapse + input:checked + div i{
     display: inline-block;
     width: 7px;
     height: 12px;
@@ -465,14 +484,15 @@ section.section-1 input:after {
     text-align: center;
     perspective: 845px;
     color: #fff;
-    height: 35vh;
+    min-height: 35vh;
 }
 
 section.section-5 > div {
     transform-style: preserve-3d;
     transform: rotateX(36deg) translateX(-7px) translateY(3px) rotateZ(0deg) scale(1);
     width: 70%;
-    margin: 0 auto;
+    margin: 18px auto;
+    min-width: 900px;
 }
 section.section-5 > div > ul {
     display: grid;
@@ -501,27 +521,16 @@ section.section-5 > div > ul > li:nth-of-type(8) {
     line-height: normal;
 }
 .table-col-8:before {
-    border-bottom-left-radius: 50%;
-    border-bottom-right-radius: 50%;
     border: 2px solid #f7e5cb;
     content: '';
     width: 100%;
     position: absolute;
     left: 0;
-    top: -56px;
-    height: 177px;
+    top: 0;
+    height: 85px;
     box-sizing: border-box;
     box-shadow: -1px 5px 0px rgba(0, 0, 0, 0.19);
-}
-.table-col-8:after {
-    box-sizing: border-box;
-    border-bottom: 2px solid #f7e5cb;
-    content: '';
-    width: calc(100% - 234px);
-    position: absolute;
-    left: 114px;
-    top: 0px;
-    height: 89px;
+    border-radius: 0px 60px 75px 74px/0px 0px 95px 87px;
 }
 section.section-5 > div > ul > li {
     border: 2px solid #f7e5cb;
@@ -574,6 +583,10 @@ section.section-5 > div > ul li ul {
     width: 2px;
     height: 8px;
     top: 100%;
+    left: calc(50% - 1px);
+}
+.table-circle .pokerchip {
+    transform: rotateX(18deg) translateX(-7px) translateY(-9px) rotateZ(0deg) scale(0.8, 0.7);
 }
 b.table-game-name {
     font-size: 30px;
@@ -586,65 +599,93 @@ aside {
     width: 100%;
     height: 62px;
     line-height: 62px;
-    position: absolute;
-    bottom: 0;
+    /* position: absolute; */
+    /* bottom: 0; */
     padding: 0 18px 0 24px;
+    text-align: center;
 }
 
 aside .btn {
     text-transform: uppercase;
-    background: transparent;
     height: 30px;
     width: 150px;
+}
+aside .btn.brown {
+    background-image: url(../img/x.png);
+    background-repeat: no-repeat;
+    background-position: 35px;
+    font-size: 14px;
+}
+aside .btn.casher {
+    margin-top: 16px;
+    background: transparent;
     border: 1px solid rgb(206, 198, 170);
 }
-
-
-.pokerchip {
-    margin: 1em;
-    position: relative;
+.chips {
+    margin: 0 auto;
     display: inline-block;
-    width: 151px;
-    height: 151px;
-    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.5), 0 0 3px 0 rgba(0, 0, 0, 0.4) inset;
+}
+.chips > * {
+    display: inline-block;
+    vertical-align: middle;
+}
+.chips i {
+    display: inline-block;
+    vertical-align: middle;
+    width: 9px;
+    height: 14px;
+    background: url(../img/scr.png) no-repeat;
+    margin: 0 10px 0 0;
+}
+.chips i:nth-of-type(1) {
+    transform: rotate(180deg);
+    opacity: 0.5;
+    margin: 0 0 0 10px;
+}
+.pokerchip {
+    display: inline-block;
+    margin: 0 5px;
+    vertical-align: middle;
+}
+.pokerchip , .pokerchip  .segment {
+    border-color: #fff;
     border-radius: 50%;
-    background-size: 151px 151px;
-    background-position: center center;
+    border-style: solid;
+    border-width: 3px;
+    box-sizing: border-box;
+    height: 40px;
+    position: relative;
+    width: 40px;
+    font-size: 14px;
+    line-height: 36px;
 }
 
-.red-chip {
-    background-image: linear-gradient(0deg, transparent 0, transparent 67.5px, #fff 67.5px, #fff 83.5px, transparent 83.5px, transparent 151px), linear-gradient(60deg, transparent 0, transparent 97.4304px, #fff 97.4304px, #fff 113.4304px, transparent 113.4304px, transparent 151px), linear-gradient(120deg, #800000 0, #800000 97.4304px, #fff 97.4304px, #fff 113.4304px, #800000 113.4304px, #800000 151px);
-}
-.red-chip:after {
-    content: "5";
-    background: #800000;
-    color: #6C0000;
-}
-.pokerchip:before {
+.pokerchip .segment {
+    -webkit-clip-path: inset(0 17px 0px 17px);
+    left: -3px;
     position: absolute;
-    content: "";
-    z-index: 1;
-    width: 117px;
-    height: 117px;
-    border-radius: 50%;
-    top: 9px;
-    left: 9px;
-    background-size: 151px 151px;
-    background-position: center center;
-}
-.pokerchip:after {
-    z-index: 2;
-    position: absolute;
-    content: "25";
-    text-align: center;
-    font: bold 50px/111px Arial;
-    white-space: pre;
-    width: 111px;
-    height: 111px;
-    border-radius: 50%;
-    top: 20px;
-    left: 20px;
-    text-shadow: -1px -1px 0px rgba(0, 0, 0, 0.3), 1px 1px 0px rgba(255, 255, 255, 0.2);
+    top: -3px;
 }
 
-/*****https://codepen.io/pmk/pen/GgrJRq********/
+.pokerchip.purple .segment {
+    border-color: #683c88;
+}
+.pokerchip.blue .segment {
+    border-color: #0e5f7f;
+}
+.pokerchip.green .segment {
+    border-color: #0a6b5b;
+}
+.pokerchip.coral .segment {
+    border-color: #8e6c44;
+}
+.pokerchip.pink .segment {
+    border-color: #b55b5b;
+}
+.pokerchip.red .segment {
+    border-color: #ba2530;
+}
+.pokerchip .segment:nth-child(1) {transform: rotate(45deg);}
+.pokerchip .segment:nth-child(2) {transform: rotate(135deg);}
+.pokerchip .segment:nth-child(3) {transform: rotate(225deg);}
+.pokerchip .segment:nth-child(4) {transform: rotate(315deg);}
