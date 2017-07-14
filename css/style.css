@@ -35,7 +35,6 @@ ul {list-style-type: none;}
     background-repeat: no-repeat;
     background-position: center;
 }
-
 /*************************************************/
 .yellow {
     background-color: rgb(232, 163, 24) ;
@@ -48,6 +47,9 @@ ul {list-style-type: none;}
 }
 .red-text{
     color:#ba2530 !important;
+}
+.gray-text{
+    color:#aba5a5 !important;
 }
 .red{
     background-color:#ba2530 !important;
@@ -64,6 +66,7 @@ ul {list-style-type: none;}
 .pink {
     background-color:#b55b5b;
 }
+
 .blue-brd {
     border-color: rgb(14, 95, 127) !important;
 }
@@ -71,13 +74,16 @@ ul {list-style-type: none;}
     border-color: #ba2530 !important;
 }
 .yellow-brd {
-    border: #e8a318 !important;
+    border-color: #e8a318 !important;
 }
 .green {
-    background-color:#0a6b5b !important;
+    background-color: #008d46!important;
 }
 .green-text {
     color: #3ac177 !important;
+}
+.green-brd {
+    border-color: #16e56c !important;
 }
 .brown-text {
     color: #3b2c2c;
@@ -96,15 +102,12 @@ ul {list-style-type: none;}
     height: 10px;
     transform: rotate(45deg);
 }
-
-
-
 .circle {
     text-align: center;
     font-style: normal;
     border-radius: 50%;
     display: inline-block;
-    background-color: rgb(204, 196, 188);
+    background-color: #aba5a5;
 }
 .crl-brd {
     border: 2px solid;
@@ -139,15 +142,13 @@ ul {list-style-type: none;}
     line-height: 4px;
 }
 /*************************************************/
-
 body {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Roboto', sans-serif;
     color: #ccc4bc;
     font-size: 12px;
     line-height: 1;
     overflow-y: auto;
 }
-
 section.section-1, section.section-3 {
     width: 30%;
     height: 45vh;
@@ -237,10 +238,7 @@ div.menu span:hover ~ ul {
     background: url(../img/casino-place.png) no-repeat;
     margin-right: 7px;
 }
-.collapse + input{
-    display: none;
-}
-.collapse + input + div{
+.collapse + input, .collapse + input + div{
     display:none;
 }
 .collapse + input:checked + div{
@@ -294,14 +292,10 @@ div.menu span:hover ~ ul {
     border-radius: 50%;
     font-size: 10px;
 }
-
-
 /***chat******/
 .chat {
     height: 110px;
     width: calc(100% - 40px);
-    /* margin: 74px 0 7px 0; */
-    /* display: table-cell; */
     position: absolute;
     bottom: 48px;
 }
@@ -333,7 +327,6 @@ section.section-1 input:after {
     top:0;
     width: 10px;
     height: 26px;
-
 }
 /******************/
 .section-3 .team-head  {
@@ -423,11 +416,18 @@ section.section-1 input:after {
     background-color: rgb(44, 30, 30);
     width: 100%;
     text-align: center;
-    height: 20vh;
+    min-height: 16vh;
+    line-height: 16vh;
+    display: inline-block;
 }
 .section-4 > div {
     display:inline-block;
-    margin-top: calc((20vh - 93px) / 2);
+    vertical-align: middle;
+}
+.section-4 > div > div {
+    float: none;
+    display: inline-grid;
+    vertical-align: middle;
 }
 .section-4-1 {
     margin-right: 40px;
@@ -446,13 +446,11 @@ section.section-1 input:after {
     float: left;
 }
 .section-4-1 ul li .circle.middle-crl {
-
     font-size: 8px;
 }
 .section-4-1 ul li:nth-of-type(2n) {
     text-align: right;
 }
-
 .section-4-2 ul {
     grid-auto-flow: column;
     display: grid;
@@ -462,7 +460,6 @@ section.section-1 input:after {
 .section-4-3 > ul {
     display: grid;
     grid-auto-flow: column;
-    /* grid-template-rows: repeat(2,1fr); */
     grid-gap: 1px;
     margin-left: 7px;
 }
@@ -473,25 +470,21 @@ section.section-1 input:after {
     display: grid;
     grid-auto-flow: column;
     grid-template-rows: repeat(6,1fr);
-    /* grid-column-gap: 0px; */
 }
-
 /*********************************************/
 .section-5 {
     background: url(../img/table-poker.png) repeat;
     width: 100%;
-    height: 306px;
     text-align: center;
     perspective: 845px;
     color: #fff;
-    min-height: 35vh;
+    min-height: 39vh;
 }
-
 section.section-5 > div {
     transform-style: preserve-3d;
     transform: rotateX(36deg) translateX(-7px) translateY(3px) rotateZ(0deg) scale(1);
     width: 70%;
-    margin: 18px auto;
+    margin: 16px auto 0 auto;
     min-width: 900px;
 }
 section.section-5 > div > ul {
@@ -512,10 +505,13 @@ section.section-5 > div > ul {
     box-shadow: -1px 5px 0px rgba(0, 0, 0, 0.19);
     padding-top: 16px;
 }
-section.section-5 > div > ul > li:nth-of-type(7),
-section.section-5 > div > ul > li:nth-of-type(9),
-section.section-5 > div > ul > li:nth-of-type(8) {
+section.section-5 > div > ul > li:nth-of-type(7), section.section-5 > div > ul > li:nth-of-type(9), section.section-5 > div > ul > li:nth-of-type(8),  section.section-5 > div > ul > li:nth-of-type(10),  section.section-5 > div > ul > li:nth-of-type(12) {
     border: none;
+    height: 0;
+}
+section.section-5 > div > ul > li:nth-of-type(8) {
+    height:90px;
+
 }
 .table-col-8 ul:last-child {
     line-height: normal;
@@ -527,7 +523,7 @@ section.section-5 > div > ul > li:nth-of-type(8) {
     position: absolute;
     left: 0;
     top: 0;
-    height: 85px;
+    height: 86px;
     box-sizing: border-box;
     box-shadow: -1px 5px 0px rgba(0, 0, 0, 0.19);
     border-radius: 0px 60px 75px 74px/0px 0px 95px 87px;
@@ -539,18 +535,39 @@ section.section-5 > div > ul > li {
     position: relative;
     overflow: hidden;
 }
-
 section.section-5 > div > ul li ul {
     display: grid;
     grid-auto-flow: column;
     line-height: 43px;
-    grid-template-rows: repeat(1,1fr);
+    grid-template-columns: 150px 1fr 150px;
+}
+section.section-5 > div > ul li ul:last-child {
+    grid-template-columns: repeat(6,1fr);
 }
 .section-5  div ul b {
     text-transform: uppercase;
     white-space: nowrap;
     line-height: 22px;
     letter-spacing: 4px;
+}
+.section-5 .red-text {
+    color: #f47676 !important;
+}
+section.section-5 > div > ul > li:nth-of-type(11) {
+    border: none;
+    line-height: normal;
+    height: 30px;
+}
+section.section-5 > div > ul > li:nth-of-type(11) ul {
+    margin: 0 9px;
+}
+section.section-5 > div > ul > li:nth-of-type(11) li {
+    line-height: normal;
+    font-weight: 300;
+}
+.fa-user {
+    display: block;
+    font-size: 15px;
 }
 .table-col-1 b, .table-col-3 b {
     font-size: 20px;
@@ -589,20 +606,28 @@ section.section-5 > div > ul li ul {
     transform: rotateX(18deg) translateX(-7px) translateY(-9px) rotateZ(0deg) scale(0.8, 0.7);
 }
 b.table-game-name {
-    font-size: 30px;
+    font-size: 38px;
     vertical-align: middle;
 }
-
 /*******************/
 aside {
     background-color: rgb(30, 22, 22);
     width: 100%;
-    height: 62px;
     line-height: 62px;
-    /* position: absolute; */
-    /* bottom: 0; */
     padding: 0 18px 0 24px;
     text-align: center;
+    /* position: absolute; */
+    /* bottom: 0; */
+    display: inline-block;
+}
+aside:before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: 0;
+    width: 100%;
+    border-bottom: 4px solid #ba2530;
+    box-sizing: border-box;
 }
 
 aside .btn {
@@ -615,11 +640,13 @@ aside .btn.brown {
     background-repeat: no-repeat;
     background-position: 35px;
     font-size: 14px;
+    color: rgb(204, 196, 188);
 }
 aside .btn.casher {
     margin-top: 16px;
     background: transparent;
     border: 1px solid rgb(206, 198, 170);
+    color: rgb(204, 196, 188);
 }
 .chips {
     margin: 0 auto;
@@ -674,7 +701,7 @@ aside .btn.casher {
     border-color: #0e5f7f;
 }
 .pokerchip.green .segment {
-    border-color: #0a6b5b;
+    border-color: #008d46;
 }
 .pokerchip.coral .segment {
     border-color: #8e6c44;
@@ -685,7 +712,41 @@ aside .btn.casher {
 .pokerchip.red .segment {
     border-color: #ba2530;
 }
+.pokerchip.yellow .segment {
+    border-color: rgb(232, 163, 24) ;
+}
 .pokerchip .segment:nth-child(1) {transform: rotate(45deg);}
 .pokerchip .segment:nth-child(2) {transform: rotate(135deg);}
 .pokerchip .segment:nth-child(3) {transform: rotate(225deg);}
 .pokerchip .segment:nth-child(4) {transform: rotate(315deg);}
+
+aside ul {
+    float: right;
+    vertical-align: middle;
+    display: inline-block;
+}
+aside ul li {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    background-size: initial;
+}
+aside ul li:nth-child(1) {
+    background: url(../img/i-1.png) no-repeat center;
+}
+aside ul li:nth-child(2) {
+    background: url(../img/i-2.png) no-repeat center;
+}
+aside ul li:nth-child(3) {
+    background: url(../img/i-3.png) no-repeat center;
+}
+aside ul li:nth-child(4) {
+    background: url(../img/i-4.png) no-repeat center;
+}
+aside ul li:nth-child(5) {
+    background: url(../img/i-5.png) no-repeat center;
+}
+aside ul li:nth-child(6) {
+    background: url(../img/i-6.png) no-repeat center;
+}
